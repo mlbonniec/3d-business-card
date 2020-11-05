@@ -1,0 +1,113 @@
+<svg class="faux code" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="440" height="190" viewBox="0 0 440 190">
+  <rect x="0" y="0" width="440" height="190" fill="#24292e" />
+  <g class="code block" stroke-linecap="round" stroke-width="5">
+    <g class="code line">
+      <line x1="47.5" y1="50" x2="67.5" y2="50" stroke="#f97583" />
+      <line x1="72.5" y1="50" x2="117.5" y2="50" stroke="#d1d5da" />
+      <line x1="127.5" y1="50" x2="127.5" y2="50" stroke="#79b8ff" />
+      <line x1="137.5" y1="50" x2="137.5" y2="50" stroke="#79b8ff" />
+      <line x1="142.5" y1="50" x2="142.5" y2="50" stroke="#d1d5da" />
+    </g>
+    <g class="code line">
+      <line x1="47.5" y1="60" x2="92.5" y2="60" stroke="#d1d5da" />
+      <line x1="92.5" y1="60" x2="92.5" y2="60" stroke="#d1d5da" />
+      <line x1="97.5" y1="60" x2="172.5" y2="60" stroke="#b392f0" />
+      <line x1="177.5" y1="60" x2="177.5" y2="60" stroke="#d1d5da" />
+      <line x1="182.5" y1="60" x2="217.5" y2="60" stroke="#ffab70" />
+      <line x1="222.5" y1="60" x2="222.5" y2="60" stroke="#d1d5da" />
+      <line x1="232.5" y1="60" x2="232.5" y2="60" stroke="#d1d5da" />
+      <line x1="237.5" y1="60" x2="237.5" y2="60" stroke="#d1d5da" />
+      <line x1="242.5" y1="60" x2="242.5" y2="60" stroke="#d1d5da" />
+      <line x1="252.5" y1="60" x2="257.5" y2="60" stroke="#79b8ff" />
+      <line x1="267.5" y1="60" x2="267.5" y2="60" stroke="#d1d5da" />
+    </g>
+    <g class="code line">
+      <line x1="47.5" y1="70" x2="57.5" y2="70" stroke="#d1d5da" />
+      <line x1="57.5" y1="70" x2="77.5" y2="70" stroke="#f97583" />
+      <line x1="87.5" y1="70" x2="102.5" y2="70" stroke="#d1d5da" />
+      <line x1="112.5" y1="70" x2="112.5" y2="70" stroke="#79b8ff" />
+      <line x1="122.5" y1="70" x2="167.5" y2="70" stroke="#d1d5da" />
+      <line x1="172.5" y1="70" x2="172.5" y2="70" stroke="#d1d5da" />
+      <line x1="182.5" y1="70" x2="187.5" y2="70" stroke="#959da5" />
+      <line x1="197.5" y1="70" x2="207.5" y2="70" stroke="#959da5" />
+      <line x1="217.5" y1="70" x2="227.5" y2="70" stroke="#959da5" />
+      <line x1="237.5" y1="70" x2="252.5" y2="70" stroke="#959da5" />
+      <line x1="262.5" y1="70" x2="287.5" y2="70" stroke="#959da5" />
+      <line x1="297.5" y1="70" x2="322.5" y2="70" stroke="#959da5" />
+      <line x1="332.5" y1="70" x2="372.5" y2="70" stroke="#959da5" />
+      <line x1="382.5" y1="70" x2="387.5" y2="70" stroke="#959da5" />
+    </g>
+    <g class="code line">
+      <line x1="47.5" y1="80" x2="57.5" y2="80" stroke="#d1d5da" />
+      <line x1="57.5" y1="80" x2="102.5" y2="80" stroke="#d1d5da" />
+      <line x1="112.5" y1="80" x2="112.5" y2="80" stroke="#79b8ff" />
+      <line x1="122.5" y1="80" x2="122.5" y2="80" stroke="#d1d5da" />
+      <line x1="127.5" y1="80" x2="127.5" y2="80" stroke="#d1d5da" />
+      <line x1="132.5" y1="80" x2="157.5" y2="80" stroke="#79b8ff" />
+      <line x1="162.5" y1="80" x2="162.5" y2="80" stroke="#d1d5da" />
+    </g>
+    <g class="code line">
+      <line x1="47.5" y1="100" x2="57.5" y2="100" stroke="#d1d5da" />
+      <line x1="57.5" y1="100" x2="62.5" y2="100" stroke="#f97583" />
+      <line x1="67.5" y1="100" x2="67.5" y2="100" stroke="#d1d5da" />
+      <line x1="72.5" y1="100" x2="87.5" y2="100" stroke="#b392f0" />
+      <line x1="92.5" y1="100" x2="92.5" y2="100" stroke="#d1d5da" />
+      <line x1="97.5" y1="100" x2="107.5" y2="100" stroke="#b392f0" />
+      <line x1="112.5" y1="100" x2="112.5" y2="100" stroke="#d1d5da" />
+      <line x1="117.5" y1="100" x2="162.5" y2="100" stroke="#d1d5da" />
+      <line x1="167.5" y1="100" x2="167.5" y2="100" stroke="#d1d5da" />
+      <line x1="177.5" y1="100" x2="182.5" y2="100" stroke="#d1d5da" />
+      <line x1="192.5" y1="100" x2="207.5" y2="100" stroke="#b392f0" />
+      <line x1="212.5" y1="100" x2="212.5" y2="100" stroke="#d1d5da" />
+      <line x1="217.5" y1="100" x2="227.5" y2="100" stroke="#b392f0" />
+      <line x1="232.5" y1="100" x2="232.5" y2="100" stroke="#d1d5da" />
+      <line x1="237.5" y1="100" x2="252.5" y2="100" stroke="#d1d5da" />
+      <line x1="257.5" y1="100" x2="257.5" y2="100" stroke="#d1d5da" />
+      <line x1="262.5" y1="100" x2="262.5" y2="100" stroke="#d1d5da" />
+    </g>
+    <g class="code line">
+      <line x1="47.5" y1="110" x2="62.5" y2="110" stroke="#d1d5da" />
+      <line x1="62.5" y1="110" x2="87.5" y2="110" stroke="#f97583" />
+      <line x1="97.5" y1="110" x2="127.5" y2="110" stroke="#d1d5da" />
+      <line x1="132.5" y1="110" x2="132.5" y2="110" stroke="#d1d5da" />
+      <line x1="137.5" y1="110" x2="147.5" y2="110" stroke="#b392f0" />
+      <line x1="152.5" y1="110" x2="152.5" y2="110" stroke="#d1d5da" />
+      <line x1="157.5" y1="110" x2="172.5" y2="110" stroke="#ffab70" />
+      <line x1="182.5" y1="110" x2="222.5" y2="110" stroke="#ffab70" />
+      <line x1="232.5" y1="110" x2="252.5" y2="110" stroke="#ffab70" />
+      <line x1="262.5" y1="110" x2="267.5" y2="110" stroke="#ffab70" />
+      <line x1="277.5" y1="110" x2="332.5" y2="110" stroke="#ffab70" />
+      <line x1="337.5" y1="110" x2="337.5" y2="110" stroke="#d1d5da" />
+      <line x1="342.5" y1="110" x2="342.5" y2="110" stroke="#d1d5da" />
+    </g>
+    <g class="code line">
+      <line x1="47.5" y1="130" x2="57.5" y2="130" stroke="#d1d5da" />
+      <line x1="57.5" y1="130" x2="87.5" y2="130" stroke="#d1d5da" />
+      <line x1="92.5" y1="130" x2="92.5" y2="130" stroke="#d1d5da" />
+      <line x1="97.5" y1="130" x2="107.5" y2="130" stroke="#b392f0" />
+      <line x1="112.5" y1="130" x2="112.5" y2="130" stroke="#d1d5da" />
+      <line x1="117.5" y1="130" x2="142.5" y2="130" stroke="#ffab70" />
+      <line x1="152.5" y1="130" x2="187.5" y2="130" stroke="#ffab70" />
+      <line x1="197.5" y1="130" x2="207.5" y2="130" stroke="#ffab70" />
+      <line x1="217.5" y1="130" x2="242.5" y2="130" stroke="#ffab70" />
+      <line x1="247.5" y1="130" x2="247.5" y2="130" stroke="#d1d5da" />
+      <line x1="252.5" y1="130" x2="252.5" y2="130" stroke="#d1d5da" />
+    </g>
+    <g class="code line">
+      <line x1="47.5" y1="140" x2="57.5" y2="140" stroke="#d1d5da" />
+      <line x1="57.5" y1="140" x2="57.5" y2="140" stroke="#d1d5da" />
+      <line x1="62.5" y1="140" x2="62.5" y2="140" stroke="#d1d5da" />
+    </g>
+  </g>  <g class="line numbers" stroke="#959da5" stroke-linecap="round" stroke-width="5">
+      <line x1="32.5" y1="50" x2="32.5" y2="50" />
+      <line x1="32.5" y1="60" x2="32.5" y2="60" />
+      <line x1="32.5" y1="70" x2="32.5" y2="70" />
+      <line x1="32.5" y1="80" x2="32.5" y2="80" />
+      <line x1="32.5" y1="90" x2="32.5" y2="90" />
+      <line x1="32.5" y1="100" x2="32.5" y2="100" />
+      <line x1="32.5" y1="110" x2="32.5" y2="110" />
+      <line x1="32.5" y1="120" x2="32.5" y2="120" />
+      <line x1="32.5" y1="130" x2="32.5" y2="130" />
+      <line x1="32.5" y1="140" x2="27.5" y2="140" />
+  </g>
+</svg>

@@ -1,0 +1,75 @@
+@import 'variables';
+
+#card {
+  display: inline-block;
+  perspective: 700px;
+  
+  &:hover .card__content {
+    box-shadow: 0 2rem 5rem rgba(14, 21, 47, 0.4), 0 16px 40px rgba(14, 21, 47, 0.4);
+  }
+}
+
+.card__content {
+  width: 435px;
+  height: 265px;
+  display: flex;
+  flex-direction: column;
+
+  background-image: url('../images/languages-pattern.png'), linear-gradient(180deg, #072142, #061c37, #07182b, #061220);
+  background-size: 350px, auto;
+  position: relative;
+  transition: .1s transform, .2s box-shadow;
+  cursor: pointer;
+  overflow: hidden;
+  
+  padding: 1.5rem;
+  border-radius: .35rem;
+  box-shadow: 0 2px 8px rgba(14, 21, 47, 0.25);
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: .15rem;
+  
+  &__lastname {
+    font-weight: 200;
+    letter-spacing: -.15rem;
+    opacity: .75;
+    margin-left: -.05rem;
+  }
+}
+.title {
+  font-size: 1rem;
+  color: $red;
+}
+
+#footer {
+  margin-top: auto;
+  line-height: 1.25;
+  
+  p {
+    font-size: .95rem;
+    opacity: .75;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: .1s ease-in-out color;
+    
+    &:hover {color: $red;}
+  }
+}
+
+.editor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(25%, -50%);
+  filter: drop-shadow(0 0 2.5rem rgba(0, 0, 0, .35));
+  border-radius: .25rem;
+  height: 60%;
+}

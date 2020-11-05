@@ -1,0 +1,39 @@
+* {box-sizing: border-box;}
+
+html {
+  height: 100%;
+  
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, "sans-serif";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  background-color: #282c34;
+  height: 100%;
+  
+  font-size: 1.35rem;
+  letter-spacing: .75px;
+  line-height: 1.45;
+}
+
+#root {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {font-size: 2rem;}
+h2 {font-size: 1.5rem;}
+h3 {font-size: 1.17rem;}
+h4 {font-size: 1rem;}
+h5 {font-size: .83rem;}
+h6 {font-size: .67rem;}
