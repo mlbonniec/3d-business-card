@@ -29,3 +29,6 @@ I used open-source tools and code for this project. The source code of the devel
 
 * [3d-card-effect](https://github.com/developedbyed/3d-card-effect) from Simo Edwin (developedbyed)
 * [Polacode](https://github.com/octref/polacode) from Pine
+
+# License
+Licensed under the GNU GPLv3, see [the license](./LICENSE).
