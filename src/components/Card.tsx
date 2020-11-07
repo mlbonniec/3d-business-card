@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { eventAdder, eventRemover } from '../utils/events-manager';
 import style from '../styles/card.module.scss';
 import editor from '../images/faux-code.svg';
 
@@ -46,10 +47,10 @@ export default function Card() {
 
     // TODO: touchcancel event
     // TODO: fix document overflow on touch
-    if ('TouchEvent' in window) {
-      containerCRT.addEventListener('touchmove', (e: TouchEvent) => setPosition(e.touches[0].pageX, e.touches[0].pageY));
-      containerCRT.addEventListener('touchstart', stopTransition);
-      containerCRT.addEventListener('touchend', resetPosition);
+      eventAdder(containerCRT, events.touch);
+      eventAdder(containerCRT, events.mouse);
+        eventRemover(containerCRT, events.touch);
+        eventRemover(containerCRT, events.mouse);
     }
   });
 
