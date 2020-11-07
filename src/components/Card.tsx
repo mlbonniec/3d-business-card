@@ -43,9 +43,14 @@ export default function Card() {
       containerCRT.addEventListener('mouseup', () => transform(1.05));
       containerCRT.addEventListener('mouseleave', resetPosition);
     }
-    containerCRT.addEventListener('mouseup', () => {
-      cardCRT.style.transform = `rotateY(${x}deg) rotateX(${y}deg) scale(1.05)`;
-    });
+
+    // TODO: touchcancel event
+    // TODO: fix document overflow on touch
+    if ('TouchEvent' in window) {
+      containerCRT.addEventListener('touchmove', (e: TouchEvent) => setPosition(e.touches[0].pageX, e.touches[0].pageY));
+      containerCRT.addEventListener('touchstart', stopTransition);
+      containerCRT.addEventListener('touchend', resetPosition);
+    }
   });
 
   return (
