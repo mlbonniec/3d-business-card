@@ -37,7 +37,7 @@ export default function Card() {
       cardCRT.style.transform = `rotateY(${x}deg) rotateX(${y}deg) scale(1)`;
     });
 
-    containerCRT.addEventListener("mouseup", () => {
+    containerCRT.addEventListener('mouseup', () => {
       cardCRT.style.transform = `rotateY(${x}deg) rotateX(${y}deg) scale(1.05)`;
     });
   });
