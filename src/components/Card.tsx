@@ -7,39 +7,50 @@ export default function Card() {
   const content: any = useRef(null);
 
   useEffect(() => {
-    const containerCRT = container.current;
-    const cardCRT = content.current;
+    const containerCRT: HTMLDivElement = container.current;
+    const cardCRT: HTMLDivElement = content.current;
 
     let x: number | null = null;
     let y: number | null = null;
 
-    // Moving Animation Event
-    containerCRT.addEventListener('mousemove', (e: MouseEvent) => {
-      const { top: topIndent, left: leftIndent, width, height } = containerCRT.getBoundingClientRect();
-      x = -((e.pageX - leftIndent) - width / 2) / 20;
-      y = ((e.pageY - topIndent) - height / 2) / 15;
+    function transform(scale: Number = 1, _x: Number | null = x, _y: Number | null = y): void {
+      cardCRT.style.transform = `rotateY(${_x}deg) rotateX(${_y}deg) scale(${scale})`;
+    }
+    
+    function setPosition(pageX: Number, pageY: Number): void {
+      const { top: topIndent, left: leftIndent, width, height } = containerCRT.getBoundingClientRect();  
       
-      cardCRT.style.transform = `rotateY(${x}deg) rotateX(${y}deg) scale(1.05)`;
-    });
-
-    // Animate In
-    containerCRT.addEventListener('mouseenter', () => {
-      cardCRT.style.transition = null;
-    });
-
-    // Animate Out
-    containerCRT.addEventListener('mouseleave', () => {
+      x = -((+pageX - leftIndent) - width / 2) / 20;
+      y = ((+pageY - topIndent) - height / 2) / 15;
+      
+      transform(1.05)
+    }
+    
+    function resetPosition(): void {
       cardCRT.style.transition = 'all 0.35s ease';
-      cardCRT.style.transform = `rotateY(0deg) rotateX(0deg) scale(1)`;
-    });
+      
+      transform(1, 0, 0);
+    }
+    
+    function stopTransition(): void {
+      cardCRT.style.transition = ''
+    }
+    
+    if ('MouseEvent' in window) {
+      containerCRT.addEventListener('mousemove', (e: MouseEvent) => setPosition(e.pageX, e.pageY));
+      containerCRT.addEventListener('mouseenter', stopTransition);
+      containerCRT.addEventListener('mousedown', () => transform(1));
+      containerCRT.addEventListener('mouseup', () => transform(1.05));
+      containerCRT.addEventListener('mouseleave', resetPosition);
+    }
 
-    containerCRT.addEventListener('mousedown', () => {
-      cardCRT.style.transform = `rotateY(${x}deg) rotateX(${y}deg) scale(1)`;
-    });
-
-    containerCRT.addEventListener("mouseup", () => {
-      cardCRT.style.transform = `rotateY(${x}deg) rotateX(${y}deg) scale(1.05)`;
-    });
+    // TODO: touchcancel event
+    // TODO: fix document overflow on touch
+    if ('TouchEvent' in window) {
+      containerCRT.addEventListener('touchmove', (e: TouchEvent) => setPosition(e.touches[0].pageX, e.touches[0].pageY));
+      containerCRT.addEventListener('touchstart', stopTransition);
+      containerCRT.addEventListener('touchend', resetPosition);
+    }
   });
 
   return (
