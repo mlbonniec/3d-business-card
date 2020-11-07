@@ -3,6 +3,11 @@ import { eventAdder, eventRemover } from '../utils/events-manager';
 import style from '../styles/card.module.scss';
 import editor from '../images/faux-code.svg';
 
+interface IEvents {
+  mouse: object;
+  touch: object;
+}
+
 export default function Card() {
   const container: any = useRef(null);
   const content: any = useRef(null);
@@ -37,19 +42,32 @@ export default function Card() {
       cardCRT.style.transition = ''
     }
     
-    if ('MouseEvent' in window) {
-      containerCRT.addEventListener('mousemove', (e: MouseEvent) => setPosition(e.pageX, e.pageY));
-      containerCRT.addEventListener('mouseenter', stopTransition);
-      containerCRT.addEventListener('mousedown', () => transform(1));
-      containerCRT.addEventListener('mouseup', () => transform(1.05));
-      containerCRT.addEventListener('mouseleave', resetPosition);
+    const events: IEvents = {
+      mouse: {
+        mousemove: (e: MouseEvent) => setPosition(e.pageX, e.pageY),
+        mouseenter: stopTransition,
+        mousedown: () => transform(1),
+        mouseup: () => transform(1.05),
+        mouseleave: resetPosition,
+      },
+      touch: {
+        touchmove: (e: TouchEvent) => setPosition(e.touches[0].pageX, e.touches[0].pageY),
+        touchstart: stopTransition,
+        touchend: resetPosition,
+      },
     }
-
+    
     // TODO: touchcancel event
     // TODO: fix document overflow on touch
+    if ('TouchEvent' in window)
       eventAdder(containerCRT, events.touch);
+    if ('MouseEvent' in window)
       eventAdder(containerCRT, events.mouse);
+      
+    return function cleanup() {
+      if ('TouchEvent' in window)
         eventRemover(containerCRT, events.touch);
+      if ('MouseEvent' in window)
         eventRemover(containerCRT, events.mouse);
     }
   });
