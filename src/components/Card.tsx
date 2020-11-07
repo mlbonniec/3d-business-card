@@ -24,7 +24,7 @@ export default function Card() {
 
     // Animate In
     containerCRT.addEventListener('mouseenter', () => {
-      cardCRT.style.transition = null;
+      cardCRT.style.transition = '';
     });
 
     // Animate Out
