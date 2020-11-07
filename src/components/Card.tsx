@@ -7,8 +7,8 @@ export default function Card() {
   const content: any = useRef(null);
 
   useEffect(() => {
-    const containerCRT = container.current;
-    const cardCRT = content.current;
+    const containerCRT: HTMLDivElement = container.current;
+    const cardCRT: HTMLDivElement = content.current;
 
     let x: number | null = null;
     let y: number | null = null;
