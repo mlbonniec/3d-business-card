@@ -39,7 +39,15 @@ export default function Card() {
     }
 
     function stopTransition(): void {
-      cardCRT.style.transition = ''
+      cardCRT.style.transition = '';
+    }
+    
+    function resetOverflow(): void {
+      document.body.style.overflow = '';
+    }
+    
+    function stopOverflow(): void {
+      document.body.style.overflow = 'hidden';
     }
 
     const events: IEvents = {
@@ -52,9 +60,15 @@ export default function Card() {
       },
       touch: {
         touchmove: (e: TouchEvent) => setPosition(e.touches[0].pageX, e.touches[0].pageY),
-        touchstart: stopTransition,
-        touchend: resetPosition,
-      },
+        touchstart: () => {
+          stopOverflow();
+          stopTransition();
+        },
+        touchend: () => {
+          resetOverflow();
+          resetPosition();
+        },
+          resetOverflow();
     }
 
     // TODO: touchcancel event
