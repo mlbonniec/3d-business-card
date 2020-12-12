@@ -68,11 +68,14 @@ export default function Card() {
           resetOverflow();
           resetPosition();
         },
+        touchcancel: () => {
+          // Doesn't work on iOS Safari
           resetOverflow();
+          resetPosition();
+        },
+      },
     }
 
-    // TODO: touchcancel event
-    // TODO: fix document overflow on touch
     if ('TouchEvent' in window)
       eventAdder(containerCRT, events.touch);
     if ('MouseEvent' in window)
