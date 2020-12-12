@@ -19,11 +19,11 @@ export default function Card() {
     let x: number | null = null;
     let y: number | null = null;
 
-    function transform(scale: Number = 1, _x: Number | null = x, _y: Number | null = y): void {
+    function transform(scale: number = 1, _x: number | null = x, _y: number | null = y): void {
       cardCRT.style.transform = `rotateY(${_x}deg) rotateX(${_y}deg) scale(${scale})`;
     }
 
-    function setPosition(pageX: Number, pageY: Number): void {
+    function setPosition(pageX: number, pageY: number): void {
       const { top: topIndent, left: leftIndent, width, height } = containerCRT.getBoundingClientRect();  
 
       x = -((+pageX - leftIndent) - width / 2) / 20;
