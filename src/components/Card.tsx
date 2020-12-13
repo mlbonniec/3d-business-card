@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { eventAdder, eventRemover } from '../utils/events-manager';
+import requestAnimationFrame from '../utils/request-animation-frame';
 import style from '../styles/card.module.scss';
 import editor from '../images/faux-code.svg';
 
@@ -52,14 +53,14 @@ export default function Card() {
 
     const events: IEvents = {
       mouse: {
-        mousemove: (e: MouseEvent) => setPosition(e.pageX, e.pageY),
+        mousemove: (e: MouseEvent) => requestAnimationFrame(() => setPosition(e.pageX, e.pageY)),
         mouseenter: stopTransition,
         mousedown: () => transform(1),
         mouseup: () => transform(1.05),
         mouseleave: resetPosition,
       },
       touch: {
-        touchmove: (e: TouchEvent) => setPosition(e.touches[0].pageX, e.touches[0].pageY),
+        touchmove: (e: TouchEvent) => requestAnimationFrame(() => setPosition(e.touches[0].pageX, e.touches[0].pageY)),
         touchstart: () => {
           stopOverflow();
           stopTransition();
