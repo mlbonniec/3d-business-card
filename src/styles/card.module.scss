@@ -3,18 +3,29 @@
 #card {
   display: inline-block;
   perspective: 700px;
+  padding: .5rem;
   
-  &:hover .card__content {
-    box-shadow: 0 2rem 5rem rgba(14, 21, 47, 0.4), 0 16px 40px rgba(14, 21, 47, 0.4);
+  width: 435px;
+  height: 265px;
+  
+  max-width: 100vw;
+  max-height: 60vw;
+  
+  min-width: 300px;
+  min-height: 170px;
+
+  @media (hover: hover) {
+    &:hover .card__content {
+      box-shadow: 0 2rem 5rem rgba(14, 21, 47, 0.4), 0 16px 40px rgba(14, 21, 47, 0.4);
+    }
   }
 }
 
 .card__content {
-  width: 435px;
-  height: 265px;
   display: flex;
   flex-direction: column;
-
+  height: 100%;
+  
   background-image: url('../images/languages-pattern.png'), linear-gradient(180deg, #072142, #061c37, #07182b, #061220);
   background-size: 350px, auto;
   position: relative;
@@ -33,6 +44,7 @@
   line-height: 1;
   font-weight: 500;
   margin-bottom: .15rem;
+  font-size: 1.5em;
   
   &__lastname {
     font-weight: 200;
@@ -42,7 +54,7 @@
   }
 }
 .title {
-  font-size: 1rem;
+  font-size: .75em;
   color: $red;
 }
 
@@ -51,7 +63,7 @@
   line-height: 1.25;
   
   p {
-    font-size: .95rem;
+    font-size: .70em;
     opacity: .75;
   }
   
