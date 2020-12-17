@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { eventAdder, eventRemover } from '../utils/events-manager';
 import requestAnimationFrame from '../utils/request-animation-frame';
+import isTouchScreen from '../utils/is-touch-screen';
 import style from '../styles/card.module.scss';
 import editor from '../images/faux-code.svg';
 
@@ -9,6 +10,8 @@ interface IEvents {
   touch: object;
 }
 
+  mobile?: boolean;
+  mobile: true,
 export default function Card() {
   const container: any = useRef(null);
   const content: any = useRef(null);
@@ -79,15 +82,10 @@ export default function Card() {
 
     if ('TouchEvent' in window)
       eventAdder(containerCRT, events.touch);
-    if ('MouseEvent' in window)
-      eventAdder(containerCRT, events.mouse);
-
-    return function cleanup() {
+      if ('MouseEvent' in window && !isTouchScreen())
       if ('TouchEvent' in window)
         eventRemover(containerCRT, events.touch);
-      if ('MouseEvent' in window)
-        eventRemover(containerCRT, events.mouse);
-    }
+        if ('MouseEvent' in window && !isTouchScreen())
   });
 
   return (
