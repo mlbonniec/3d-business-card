@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { ReactElement, useEffect, useRef } from 'react';
 import { eventAdder, eventRemover } from '../utils/events-manager';
 import requestAnimationFrame from '../utils/request-animation-frame';
 import isTouchScreen from '../utils/is-touch-screen';
@@ -10,9 +10,17 @@ interface IEvents {
   touch: object;
 }
 
+interface IProps {
+  animated?: boolean;
   mobile?: boolean;
+}
+
+Card.defaultProps = {
+  animated: true,
   mobile: true,
-export default function Card() {
+}
+
+export default function Card({ mobile, animated }: IProps): ReactElement {
   const container: any = useRef(null);
   const content: any = useRef(null);
 
@@ -80,12 +88,19 @@ export default function Card() {
       },
     }
 
-    if ('TouchEvent' in window)
-      eventAdder(containerCRT, events.touch);
+    if (animated) {
+      if ('TouchEvent' in window && mobile)
+        eventAdder(containerCRT, events.touch);
       if ('MouseEvent' in window && !isTouchScreen())
-      if ('TouchEvent' in window)
-        eventRemover(containerCRT, events.touch);
+        eventAdder(containerCRT, events.mouse);
+        
+      return function cleanup() {
+        if ('TouchEvent' in window && mobile)
+          eventRemover(containerCRT, events.touch);
         if ('MouseEvent' in window && !isTouchScreen())
+          eventRemover(containerCRT, events.mouse);
+      }
+    }
   });
 
   return (
