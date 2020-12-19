@@ -1,5 +1,9 @@
 @import 'variables';
 
+:global {
+  h1, p {margin: 0;}
+}
+
 #card {
   display: inline-block;
   perspective: 700px;
@@ -27,6 +31,7 @@
   height: 100%;
   
   background-image: url('../images/languages-pattern.png'), linear-gradient(180deg, #072142, #061c37, #07182b, #061220);
+  // background-image: linear-gradient(180deg, #072142, #061c37, #07182b, #061220);
   background-size: 350px, auto;
   position: relative;
   transition: .1s transform, .2s box-shadow;

@@ -1,4 +1,4 @@
-import { ReactElement, useEffect, useRef } from 'react';
+import React, { ReactElement, useEffect, useRef } from 'react';
 import { eventAdder, eventRemover } from '../utils/events-manager';
 import requestAnimationFrame from '../utils/request-animation-frame';
 import isTouchScreen from '../utils/is-touch-screen';
