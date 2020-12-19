@@ -1,11 +1,7 @@
 @import 'variables';
-
-:global {
-  h1, p {margin: 0;}
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap');
 
 #card {
-  display: inline-block;
   perspective: 700px;
   padding: .5rem;
   
@@ -17,7 +13,20 @@
   
   min-width: 300px;
   min-height: 170px;
-
+  
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, "sans-serif";
+  color: #fff;
+  letter-spacing: 0.75px;
+  line-height: 1.45;
+  
+  &, * {box-sizing: border-box;}
+  p {margin: 0;}
+  
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ / Edge */
+  user-select: none; /* Standard */
+  
   @media (hover: hover) {
     &:hover .card__content {
       box-shadow: 0 2rem 5rem rgba(14, 21, 47, 0.4), 0 16px 40px rgba(14, 21, 47, 0.4);
@@ -31,7 +40,6 @@
   height: 100%;
   
   background-image: url('../images/languages-pattern.png'), linear-gradient(180deg, #072142, #061c37, #07182b, #061220);
-  // background-image: linear-gradient(180deg, #072142, #061c37, #07182b, #061220);
   background-size: 350px, auto;
   position: relative;
   transition: .1s transform, .2s box-shadow;
@@ -48,6 +56,7 @@
   flex-direction: column;
   line-height: 1;
   font-weight: 500;
+  margin: 0;
   margin-bottom: .15rem;
   font-size: 2em;
   
