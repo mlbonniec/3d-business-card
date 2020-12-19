@@ -1,9 +1,13 @@
 {
-  "name": "business-card",
+  "name": "@mlbonniec/3d-business-card",
   "version": "1.0.0",
   "dependencies": {},
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
+  "repository": "git://github.com/mlbonniec/3d-business-card",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
