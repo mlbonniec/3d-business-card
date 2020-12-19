@@ -1,45 +1,29 @@
 {
   "name": "business-card",
   "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.5.0",
-    "@types/jest": "^26.0.18",
-    "@types/node": "^14.14.12",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
-  },
+  "dependencies": {},
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "scripts": {
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
-    "prod": "npx serve -s build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "build": "rollup -c",
+    "build-watch": "rollup -c -w",
+    "start-playground": "cd playground && npm run start",
+    "i-all": "npm i && cd playground && npm i",
+    "dev": "npm-run-all --parallel build-watch start-playground"
   },
   "devDependencies": {
-    "sass": "^1.30.0"
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.1",
+    "postcss-url": "^10.1.1",
+    "rollup": "^2.35.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-smart-asset": "^2.1.0",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "sass": "^1.30.0",
+    "typescript": "^4.1.3"
   }
 }
