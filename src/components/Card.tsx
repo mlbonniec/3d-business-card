@@ -32,14 +32,14 @@ export default function Card({ mobile, animated }: IProps): ReactElement {
     let y: number | null = null;
 
     function transform(scale: number = 1, _x: number | null = x, _y: number | null = y): void {
-      cardCRT.style.transform = `rotateY(${_x}deg) rotateX(${_y}deg) scale(${scale})`;
+      cardCRT.style.transform = `rotateY(${_y}deg) rotateX(${_x}deg) scale(${scale})`;
     }
 
     function setPosition(pageX: number, pageY: number): void {
-      const { top: topIndent, left: leftIndent, width, height } = containerCRT.getBoundingClientRect();  
+      const { top, left, width, height } = containerCRT.getBoundingClientRect();
 
-      x = -((+pageX - leftIndent) - width / 2) / 20;
-      y = ((+pageY - topIndent) - height / 2) / 15;
+      x = ((pageY - top) - height/2) / 17.5;
+      y = -((pageX - left) - width/2) / 20;
 
       transform(1.05)
     }
