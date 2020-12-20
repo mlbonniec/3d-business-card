@@ -12,10 +12,12 @@ export default [
         file: 'playground/src/3d-business-card/index.js',
         format: 'cjs',
         banner: '/* eslint-disable */',
+        exports: 'named',
       },
       {
         file: 'dist/index.js',
         format: 'cjs',
+        exports: 'named',
       },
     ],
     plugins: [
@@ -36,5 +38,8 @@ export default [
         url: 'inline',
       }),
     ],
+    external: [
+      'react',
+    ]
   },
 ];
