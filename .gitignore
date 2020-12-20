@@ -9,7 +9,9 @@
 /coverage
 
 # production
+/dist
 /build
+/playground
 
 # misc
 .DS_Store
