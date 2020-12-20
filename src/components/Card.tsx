@@ -64,14 +64,14 @@ export default function Card({ mobile, animated }: IProps): ReactElement {
 
     const events: IEvents = {
       mouse: {
-        mousemove: (e: MouseEvent) => requestAnimationFrame(() => setPosition(e.pageX, e.pageY)),
+        mousemove: (e: MouseEvent) => requestAnimationFrame(() => setPosition(e.clientX, e.clientY)),
         mouseenter: stopTransition,
         mousedown: () => transform(1),
         mouseup: () => transform(1.05),
         mouseleave: resetPosition,
       },
       touch: {
-        touchmove: (e: TouchEvent) => requestAnimationFrame(() => setPosition(e.touches[0].pageX, e.touches[0].pageY)),
+        touchmove: (e: TouchEvent) => requestAnimationFrame(() => setPosition(e.touches[0].clientX, e.touches[0].clientY)),
         touchstart: () => {
           stopOverflow();
           stopTransition();
