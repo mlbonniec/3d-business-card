@@ -1,6 +1,6 @@
-import { ReactElement, useEffect, useRef } from 'react';
+import React, { ReactElement, useEffect, useRef } from 'react';
 import { eventAdder, eventRemover } from '../utils/events-manager';
-import requestAnimationFrame from '../utils/request-animation-frame';
+// import requestAnimationFrame from '../utils/request-animation-frame';
 import isTouchScreen from '../utils/is-touch-screen';
 import style from '../styles/card.module.scss';
 import editor from '../images/faux-code.svg';
@@ -45,7 +45,7 @@ export default function Card({ mobile, animated }: IProps): ReactElement {
     }
 
     function resetPosition(): void {
-      cardCRT.style.transition = 'all 0.35s ease';
+      cardCRT.style.transition = 'transform 0.35s ease, box-shadow 0.35s ease';
 
       transform(1, 0, 0);
     }
